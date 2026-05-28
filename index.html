@@ -546,7 +546,7 @@
     const email = document.getElementById('free-email').value.trim();
     if (!username) { alert('Please choose a username.'); return; }
     if (!validateEmail(email)) { alert('Please enter a valid email address.'); return; }
-    // TODO: Replace with your Mailchimp form action URL
+    fetch('https://secquela.us22.list-manage.com/subscribe/post?u=e0effe232924babcd5605cab1&id=3a8f2ad7fd&f_id=0002c6e1f0', { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams({ EMAIL: email, MERGE1: username, subscribe: 'Subscribe' }) });
     document.getElementById('free-form').style.display = 'none';
     document.getElementById('free-success').style.display = 'block';
     animateCounter(48);
